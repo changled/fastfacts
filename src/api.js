@@ -73,4 +73,4 @@ server.get('/facts', getFacts);
 server.post('/addFact', addFact);
 
 // Start the server
-server.listen(config.server.port);
+server.listen(process.env.PORT || config.server.port);
