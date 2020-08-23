@@ -1,0 +1,38 @@
+{
+  "name": "fastfacts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "@popperjs/core": "^2.4.4",
+    "axios": "^0.20.0",
+    "babel-loader": "^8.1.0",
+    "bootstrap": "^4.5.2",
+    "cors": "^2.8.5",
+    "css-loader": "^4.2.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "html-loader": "^1.2.1",
+    "html-webpack-plugin": "^4.3.0",
+    "jquery": "^3.5.1",
+    "mysql": "^2.18.1",
+    "popper.js": "^1.16.1",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.3.0",
+    "react-dom": "^16.13.1",
+    "react-router": "^5.2.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "webpack --mode production"
+  },
+  "proxy": "http://localhost:3000",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
