@@ -69,6 +69,10 @@ function addFact(request, response) {
 	});
 }
 
+server.get('/', function (request, response) {
+  	response.render('index', {});
+});
+
 server.get('/facts', getFacts);
 server.post('/addFact', addFact);
 
