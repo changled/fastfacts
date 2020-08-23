@@ -29,7 +29,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "start": "node src/api.js"
   },
   "proxy": "http://localhost:3000",
   "keywords": [],

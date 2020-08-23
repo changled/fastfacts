@@ -1,4 +1,3 @@
-require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
@@ -27,11 +26,12 @@ server.use(
 // Parses the text as JSON and exposes the resulting object on req.body
 server.use(bodyParser.json());
 
+const config = require('./config.js');
 const connection = mysql.createConnection({
-	host: process.env.DB_HOST,
-	user: process.env.DB_USER,
-	password: process.env.DB_PASS,
-	database: process.env.DB_NAME
+	host: config.database.host,
+	user: config.database.user,
+	password: config.database.password,
+	database: config.database.db
 });
 
 // Get all facts from the database
@@ -73,4 +73,4 @@ server.get('/facts', getFacts);
 server.post('/addFact', addFact);
 
 // Start the server
-server.listen(3000);
+server.listen(config.server.port);
