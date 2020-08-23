@@ -2,9 +2,12 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
 const cors = require('cors');
+const path = require('path');
 
 // Initialize the server
 const server = express();
+server.set('views', path.join(__dirname, 'views'));
+server.set('view engine', 'ejs');
 
 // Darn CORS issues
 server.use(cors());
